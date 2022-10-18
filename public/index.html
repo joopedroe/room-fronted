@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="theme-color" content="#6e45e2">
+  <link rel="icon" type="image/png" sizes="16x16" href="">
+  <title>Room</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <style>
+    *,
+    html,
+    body {
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .loading-app {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #88d3ce;
+      /* Old browsers */
+      background: -moz-linear-gradient(-45deg, #88d3ce 0%, #6e45e2 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(-45deg, #88d3ce 0%, #6e45e2 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(135deg, #88d3ce 0%, #6e45e2 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88d3ce', endColorstr='#6e45e2', GradientType=1);
+      /* IE6-9 fallback on horizontal gradient */
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100000;
+      opacity: 1;
+      overflow-y: scroll;
+      transition: all .5s;
+      padding: 0 10%;
+      flex-direction: column;
+      font-family: "Nunito", Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    .loading-app h1, .loading-app .h1-loading {
+      color: #fff;
+      display: block;
+      font-size: 20px;
+      margin-block-start: 0.67em;
+      margin-block-end: 0.67em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding: 0 !important;
+      margin: 0px 0px 0px !important;
+    }
+
+    .loading-app h2, .loading-app .h2-loading {
+      color: #fff;
+      display: block;
+      font-size: 16px !important;
+      font-weight: 400 !important;
+      padding: 0 !important;
+      margin: 0px 0px 16px !important;
+    }
+
+    .loading-app .background {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      top: 0;
+      -webkit-transition: .3s ease-in;
+      transition: .3s ease-in;
+      background-color: #fff !important;
+      border-color: #fff !important;
+    }
+
+    .indicator {
+      margin-bottom: 15px;
+      transform: scale(2.5);
+    }
+    .indicator svg polyline {
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .indicator svg polyline#back {
+      stroke: rgba(255,255,255,0.3);
+    }
+    .indicator svg polyline#front {
+      stroke: #fff;
+      stroke-dasharray: 12, 36;
+      stroke-dashoffset: 48;
+      animation: dash 1s linear infinite;
+    }
+    @-moz-keyframes dash {
+      62.5% {
+        opacity: 0;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    @-webkit-keyframes dash {
+      62.5% {
+        opacity: 0;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    @-o-keyframes dash {
+      62.5% {
+        opacity: 0;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    @keyframes dash {
+      62.5% {
+        opacity: 0;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="app">
+  </div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
